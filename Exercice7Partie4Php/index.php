@@ -4,18 +4,18 @@
   function genderAndAge(string $gender, int $age)
   {
     if ($gender == 'Homme' && $age >= 18) {
-      echo "Vous etes un $gender majeur, vous avez $age ans.";
+      return 'Vous etes un ' . $gender . ' majeur, vous avez ' . $age . 'ans.';
     }
-    elseif ($gender == 'Homme' && $age < 18) {
-      echo "Vous etes un $gender mineur, vous avez $age ans.";
+    elseif ($gender == 'Homme') {
+      return 'Vous etes un ' . $gender . ' mineur, vous avez ' . $age . 'ans.';
     }
-    elseif ($gender == 'Femme' && $age >= 18) {
-      echo "Vous etes une $gender majeure, vous avez $age ans.";
+    elseif ($age >= 18) {
+      return 'Vous etes une ' . $gender . ' majeur, vous avez ' . $age . 'ans.';
     }
     else {
-      echo "Vous etes une $gender mineure, vous avez $age ans.";
-    };
-  };
+      return 'Vous etes une ' . $gender . ' mineur, vous avez ' . $age . 'ans.';
+    }
+  }
  ?>
 <!doctype html>
 <html lang="fr">
@@ -30,7 +30,7 @@
   <h1>Exercice 7 Partie 4 PHP</h1>
   <div class="container">
     <p>
-      <?php genderAndAge($gender, $age); ?>
+      <?= genderAndAge($gender, $age); ?>
     </p>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

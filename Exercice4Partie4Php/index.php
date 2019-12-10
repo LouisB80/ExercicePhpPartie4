@@ -4,14 +4,14 @@
   function compare(int $firstval, int $secondval)
   {
     if ($firstval > $secondval) {
-      echo 'Le Premier nombre est plus grand';
+      return 'Le Premier nombre est plus grand';
     }
     elseif ($firstval < $secondval) {
-      echo 'Le Premier nombre est plus petit';
+      return 'Le Premier nombre est plus petit';
     }
     else {
-      echo 'Les deux nombres sont identiques';
-    };
+      return 'Les deux nombres sont identiques';
+    }
   }
  ?>
 <!doctype html>
@@ -27,7 +27,7 @@
   <h1>Exercice 4 Partie 4 PHP</h1>
   <div class="container">
     <p>
-      <?php compare($numberOne, $numberTwo); ?>
+      <?= compare($numberOne, $numberTwo); ?>
     </p>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

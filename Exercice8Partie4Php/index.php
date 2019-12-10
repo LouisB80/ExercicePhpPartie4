@@ -4,8 +4,19 @@
   $thirdNumber = 45;
   function FunctionName(int $numberOne = 1, int $numberTwo = 1, int $numberThree = 1)
   {
-    $result = $numberOne + $numberTwo + $numberThree;
-    echo 'Le somme des trois nombre vaut: ' . $result;
+    return 'Le somme des trois nombre vaut: ' . ($numberOne + $numberTwo + $numberThree);
+  }
+  function unlimitedParam()
+  {
+    // func_get_args renvoi une liste des paramètres entrés.
+    $data = func_get_args();
+    // for ($i = 0; $i < count($data); $i++) {
+    //     $result += $data[$i];
+    // }
+    foreach ($data as $number) {
+      $result += $number;
+    }
+    return $result;
   }
  ?>
 <!doctype html>
@@ -21,9 +32,7 @@
   <h1>Exercice 8 Partie 4 PHP</h1>
   <div class="container">
     <p class="text-center">
-      <?php
-      FunctionName($firstNumber, $secondNumber, $thirdNumber);
-      ?>
+      <?= unlimitedParam(2,3,4,5,6,7,8,9,10); ?>
     </p>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

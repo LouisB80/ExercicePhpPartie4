@@ -1,8 +1,6 @@
 <?php
   function HelloWorld()
   {
-    $name = 'Hello World';
-    echo $name;
     return true;
   };
  ?>
@@ -19,9 +17,7 @@
   <h1>Exercice 1 Partie 4 PHP</h1>
   <div class="container">
     <p>
-      <?php
-      HelloWorld();
-      ?>
+      <?= HelloWorld(); ?>
     </p>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

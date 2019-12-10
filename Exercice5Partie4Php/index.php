@@ -1,9 +1,9 @@
 <?php
   $firstNumber = 2019;
-  $string = 'Nous sommes en ';
+  $string = 'Nous sommes en';
   function concat(int $number, string $string)
   {
-    echo $string . $number;
+    return $string . ' ' . $number;
   };
  ?>
 <!doctype html>
@@ -19,7 +19,7 @@
   <h1>Exercice 5 Partie 4 PHP</h1>
   <div class="container">
     <p>
-      <?php concat($firstNumber, $string); ?>
+      <?= concat($firstNumber, $string); ?>
     </p>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

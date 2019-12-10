@@ -4,7 +4,7 @@
   $year = 23;
   function concat($firstName, $lastName, $year)
   {
-    echo "Bonjour $lastName $firstName, vous avez $year ans.";
+    return 'Bonjour ' . $lastName . ' ' . $firstName . ', vous avez ' . $year . ' ans.';
   }
  ?>
 <!doctype html>
@@ -20,7 +20,7 @@
   <h1 class="text-center">Exercice 6 Partie 4 PHP</h1>
   <div class="container">
     <p>
-      <?php concat($firstName, $lastName, $year); ?>
+      <?= concat($firstName, $lastName, $year); ?>
     </p>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

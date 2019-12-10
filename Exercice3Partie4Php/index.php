@@ -1,10 +1,16 @@
 <?php
   $hello = 'Hello';
   $world = 'World';
+
   function concat(string $first, string $second)
   {
-    echo $first . ' ' . $second;
-  };
+    return $first . ' ' . $second;
+  }
+  function getFullName(string $firstName, string $lastName)
+  {
+    return $firstName . ' ' . $lastName;
+  }
+  $fullName = getFullName('Hebert', 'Louis-bernard');
  ?>
 <!doctype html>
 <html lang="fr">
@@ -20,7 +26,7 @@
   <div class="container-fluid">
     <div class="row">
       <p>
-        <?php concat($hello, $world); ?>
+        <?= concat($hello, $world); ?>
       </p>
     </div>
   </div>
